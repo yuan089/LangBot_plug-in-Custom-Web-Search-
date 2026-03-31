@@ -10,7 +10,7 @@
 當 AI 想要搜尋時，它會自動將 {query} 替換為實際的搜尋關鍵字。
 📋 常用搜尋引擎配置參考：
 搜尋引擎	穩定度	配置網址填寫方式
-DuckDuckGo (預設/推薦)	⭐⭐⭐⭐⭐	https://html.duckduckgo.com/html/?q={query}
+/n DuckDuckGo (預設/推薦)	⭐⭐⭐⭐⭐	https://html.duckduckgo.com/html/?q={query}
 維基百科	(推薦)⭐⭐⭐⭐⭐	https://zh.wikipedia.org/w/index.php?search={query}
 Bilibili (小概率卡殼)	⭐⭐⭐⭐⭐	https://search.bilibili.com/all?keyword={query}
 百度 (容易吃到廣告)	⭐⭐⭐	https://www.baidu.com/s?wd={query}
