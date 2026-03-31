@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Plugin
+metadata:
+  author: Aisin_Lychee
+  name: CustomSearchPlugin
+  version: 0.1.0
+  description:
+    en_US: Custom search engine for LLM
+    zh_Hans: 用於供 LLM 使用自定義引擎搜尋的工具
+  label:
+    en_US: CustomSearch
+    zh_Hans: 自定義搜尋插件
+  icon: assets/icon.svg
+spec:
+  config:
+    - name: search_url_template
+      type: string
+      label:
+        en_US: Search Engine URL
+        zh_Hans: 搜尋引擎網址
+      description:
+        en_US: URL template with {query}
+        zh_Hans: 請填入搜尋引擎網址，並用 {query} 代表關鍵字。
+      default: "https://html.duckduckgo.com/html/?q={query}"
+      required: true
+  components:
+    Tool:
+      fromDirs:
+      - path: components/tools/
+execution:
+  python:
+    path: main.py
+    attr: CustomSearchPlugin
